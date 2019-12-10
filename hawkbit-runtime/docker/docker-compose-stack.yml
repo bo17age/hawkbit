@@ -18,7 +18,7 @@ services:
     networks:
     - hawknet
     ports:
-    - "8080:8080"
+    - "8060:8080"
     deploy:
       restart_policy:
         condition: on-failure
@@ -56,9 +56,9 @@ services:
     image: "rabbitmq:3-management"
     networks:
     - hawknet
-    ports:
-    - "15672:15672"
-    - "5672:5672"
+    #ports:
+    #- "15672:15672"
+    #- "5672:5672"
     deploy:
       restart_policy:
         condition: on-failure
@@ -72,8 +72,8 @@ services:
     image: "mysql:5.7"
     networks:
     - hawknet
-    ports:
-    - "3306:3306"
+    #ports:
+    #- "3306:3306"
     deploy:
       restart_policy:
         condition: on-failure
